@@ -1,0 +1,93 @@
+@import 'utilities/_variables';
+
+.calendar-container {
+    position: absolute;
+    top: 53px;
+    right: 50%;
+    transform: translate(50%);
+    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.5));
+    box-shadow: 0px 2px 10px 0px #00000080;
+
+    @media (min-width: $small-screens) {
+        transform: none;
+        right: 9.44%;
+    }
+
+    .calendar-arrow {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 19px solid #C42521;
+        transform: rotate(90deg);
+        position: absolute;
+        top: -16px;
+        right: 24px;
+        display: none;
+
+        @media (min-width: $small-screens) {
+            display: block;
+
+        }
+    }
+}
+
+.calendar-display {
+    background-color: $brand-color;
+    color: $brand-white;
+    padding: 14px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 12px;
+        cursor: pointer;
+
+        &.disabled {
+            opacity: 50%;
+            cursor: default;
+        }
+    }
+
+    .calendar-left-arrow {
+        left: 102px;
+    }
+
+    .calendar-right-arrow {
+        right: 102px;
+    }
+
+    p {
+        font-family: $brand-font-family;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.calendar-selector {
+    display: flex;
+    flex-wrap: wrap;
+    width: 309px;
+    padding: 8px 5px;
+    background-color: $brand-white;
+}
+
+.calendar-button {
+    width: 77px;
+    margin: 2px 13px;
+    padding: 12px 22px;
+    text-align: center;
+    border: none;
+    font-family: $brand-font-family;
+    color: $brand-font-color;
+    background-color: $brand-white;
+    font-size: $default-font-size;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $brand-color;
+        color: $brand-white;
+    }
+}

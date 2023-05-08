@@ -1,0 +1,52 @@
+@import 'utilities/_variables';
+
+.poster {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.poster-image {
+    width: 100%;
+}
+
+.poster-text-container {
+    position: absolute;
+    padding: 8px 14px;
+    width: calc(100% - 16px);
+    bottom: 0;
+    background-color: $brand-color;
+
+    @media (min-width: $medium-screens) {
+        width: calc(100% - 28px);
+        font-size: 36px;
+        padding: 16px 14px;
+    }
+
+    img {
+        position: absolute;
+        top: 21px;
+
+        @media (min-width: $medium-screens) {
+            width: 32px;
+        }
+    }
+}
+
+.poster-text {
+    font-family: $brand-color;
+    color: $brand-white;
+    font-weight: 700;
+    margin: 0 0 0 42px;
+    font-size: 24px;
+    line-height: 50px;
+
+    @media (min-width: $medium-screens) {
+        line-height: 42px;
+        font-size: 36px;
+    }
+}

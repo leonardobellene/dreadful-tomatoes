@@ -1,0 +1,27 @@
+@import 'utilities/_variables';
+
+.Footer {
+    padding: 14px 0 22px;
+}
+
+.footer-logo-icon {
+    margin: 0 auto 40px;
+    display: block;
+}
+
+.footer-mobile-icon-container {
+    margin: 0 auto;
+    width: fit-content;
+
+    img {
+        margin: 0 7px;
+    }
+}
+
+.footer-copyright-info {
+    font-family: $brand-font-family;
+    color: $brand-white;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.35px;
+}

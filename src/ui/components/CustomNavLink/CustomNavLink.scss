@@ -1,0 +1,37 @@
+@import 'utilities/_variables';
+
+.custom-nav-link {
+    &.selected {
+        background-color: $brand-color;
+    }
+
+    &:hover .nav-button-container {
+        opacity: 0.7;
+    }
+}
+
+.nav-button-container {
+    position: relative;
+    margin: 14px;
+
+    @media (min-width: $medium-screens) {
+        width: 84px;
+    }
+
+    p {
+        position: absolute;
+        top: 8px;
+        left: 38px;
+        font-family: $brand-font-family;
+        font-size: $default-font-size;
+        font-weight: 700;
+        margin: 0;
+        color: $brand-white;
+        text-decoration: none;
+        display: none;
+
+        @media (min-width: $medium-screens) {
+            display: block;
+        }
+    }
+}

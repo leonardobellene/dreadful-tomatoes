@@ -1,0 +1,57 @@
+@import 'utilities/_variables';
+
+.show-selector-container {
+    color: white;
+    padding: 18px 0 25px;
+
+    h1 {
+        text-align: center;
+        font-family: $brand-font-family;
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+.card-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    max-width: 1180px;
+    margin: 18px auto;
+}
+
+.pagination-button {
+    font-family: $brand-font-family;
+    font-size: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: $brand-color;
+    color: $brand-white;
+    opacity: 0.6;
+    margin: 3.5px;
+    cursor: pointer;
+
+    &.active {
+        opacity: 1;
+        cursor: default;
+    }
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 35px;
+
+    img {
+        margin: 9px;
+        cursor: pointer;
+
+        &.disabled {
+            opacity: 50%;
+            cursor: default;
+        }
+    }
+}

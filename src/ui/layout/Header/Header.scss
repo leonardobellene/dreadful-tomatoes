@@ -1,0 +1,19 @@
+@import 'utilities/_variables';
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (min-width: $small-screens) {
+        margin-right: 9.5%;
+    }
+
+    .dreadful-tomatoes-logo {
+        margin: 7px auto 7px 0;
+
+        @media (min-width: $small-screens) {
+            margin-left: 9.5%;
+        }
+
+    }
+}

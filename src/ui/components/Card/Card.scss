@@ -1,0 +1,78 @@
+@import 'utilities/_variables';
+
+.card-container {
+    width: 85%;
+    height: 20%;
+    margin: 6px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover .card-image {
+        transition: 1s;
+        width: 246px;
+
+        @-moz-document url-prefix() {
+            opacity: 0.7;
+        }
+    }
+    
+
+
+    .card-image {
+        width: 100%;
+    }
+
+    @media (min-width: $small-screens) {
+        width: 224px;
+        height: 300px;
+    }
+}
+
+.card-info-container {
+    padding: 0 14px 8px;
+    position: absolute;
+    bottom: -148px;
+    width: calc(100% - 28px);
+    height: 191px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &.active {
+        bottom: 0;
+        transition: all 1s ease;
+    }
+}
+
+.card-title {
+    font-family: $brand-font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.card-release-year {
+    font-family: $brand-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.card-description-container {
+    overflow: hidden;
+    height: 97px;
+
+    @-moz-document url-prefix() {
+        height: 100px;
+      }
+}
+
+.card-description {
+    font-family: $brand-font-family;
+    font-size: $default-font-size;
+    margin: 0;
+}

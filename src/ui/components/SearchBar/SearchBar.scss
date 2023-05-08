@@ -1,0 +1,71 @@
+@import 'utilities/_variables';
+
+.search-bar {
+    background-color: $brand-color;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    position: relative;
+    padding: 14px 9.44%;
+    z-index: 1;
+
+    @media (min-width: $medium-screens) {
+        gap: 32px;
+    }
+}
+
+.search-icon {
+    position: absolute;
+    top: 21px;
+    left: calc(16px + 9.44%);
+}
+
+.search-bar-input {
+    border: #FFFFFF;
+    border-radius: 5.57px;
+    font-family: $brand-font-family;
+    color: $brand-font-color;
+    font-size: $default-font-size;
+    padding: 11px 44px;
+    width: 72.6%;
+    }
+
+.year-picker-button-container {
+    position: relative;
+    width: 55px;
+    max-width: 208px;
+    padding: 11px 6px;
+    background-color: $brand-white;
+    border: $brand-white;
+    border-radius: 5.57px;
+    cursor: pointer;
+
+    @media (min-width: $medium-screens) {
+        width: 18%;
+    }
+
+    img {
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translate(-50%);
+
+        @media (min-width: $medium-screens) {
+            left: 14px;
+            transform: none;
+        }
+    }
+
+    p {
+        font-family: $brand-font-family;
+        font-size: $default-font-size;
+        color: $brand-font-color;
+        margin: 0 0 0 39px;
+        text-align: left;
+        display: none;
+
+        @media (min-width: $medium-screens) {
+            display: block;
+        }
+    }
+}
